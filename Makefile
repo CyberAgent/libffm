@@ -13,6 +13,12 @@ endif
 
 all: ffm-train ffm-predict
 
+valgrind:
+	docker build -t cyberagent/libffm .
+	docker run -it --rm \
+		-v `PWD`/data:/usr/src/data \
+		bash
+
 ffm-train: ffm-train.cpp ffm.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
