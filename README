@@ -327,12 +327,12 @@ Apple clang (use libomp)
     brew install libomp
     make OMP_CXXFLAGS="-Xpreprocessor -fopenmp -I$(brew --prefix libomp)/include" OMP_LDFLAGS="-L$(brew --prefix libomp)/lib -lomp"
 
-Using gcc (installed by homebrew)
+Using Homebrew's gcc
 
     brew install gcc
-    make CXX="g++-8"
+    make CXX="g++-10"
 
-Note: replace "8" with version of gcc installed on your machine
+Note: replace "10" with version of gcc installed on your machine
 
 Building Windows Binaries
 =========================
